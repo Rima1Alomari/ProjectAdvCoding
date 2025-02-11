@@ -104,6 +104,5 @@ SELECT get_avg_rating('Movie theater') AS average_rating;
 
 ```
 <img width="831" alt="Screenshot 2025-02-11 at 12 27 56 PM" src="https://github.com/user-attachments/assets/d3be6558-c884-42cc-b9ec-81aff89bfccc" />
-
-<img width="845" alt="Screenshot 2025-02-11 at 12 28 12 PM" src="https://github.com/user-attachments/assets/98998a0a-c4f2-4383-90e8-e2a9f7c600c1" />
+![image](https://github.com/user-attachments/assets/9aecbcc3-5a67-4aee-8047-c3513af6b2b0)
 
