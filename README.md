@@ -82,3 +82,28 @@ SELECT * FROM ksa ORDER BY RAND() LIMIT 5;
 ```
 ![image](https://github.com/user-attachments/assets/ae43702f-2b59-4668-a15d-6c8064d0bb2b)
 
+#### 11. Create a function that returns the average rating of a given genre.
+
+```sql
+USE tradings;
+DELIMITER //
+CREATE FUNCTION get_avg_rating(genre_name VARCHAR(255)) 
+RETURNS DECIMAL(5,2) DETERMINISTIC
+BEGIN
+    DECLARE avg_rating DECIMAL(5,2);
+    
+    SELECT AVG(rating) INTO avg_rating 
+    FROM ksa 
+    WHERE genre = genre_name;
+    
+    RETURN avg_rating;
+END;
+//
+DELIMITER ;
+SELECT get_avg_rating('Movie theater') AS average_rating;
+
+```
+<img width="831" alt="Screenshot 2025-02-11 at 12 27 56 PM" src="https://github.com/user-attachments/assets/d3be6558-c884-42cc-b9ec-81aff89bfccc" />
+
+<img width="845" alt="Screenshot 2025-02-11 at 12 28 12 PM" src="https://github.com/user-attachments/assets/98998a0a-c4f2-4383-90e8-e2a9f7c600c1" />
+
