@@ -17,40 +17,68 @@ USE tradings;
 ```sql
 SELECT * FROM tradings. ksa;
 ```
+![image](https://github.com/user-attachments/assets/828418a2-6497-4be5-87f4-c33bdf2cd7c9)
+
 
 #### 2. Show all places with a rating higher than 4.
 ```sql
 SELECT * FROM ksa WHERE rating > 4;
 ```
+![image](https://github.com/user-attachments/assets/6a15b0b3-cf46-49fe-bfc5-37c424e913fa)
+
+
 #### 3. Count the number of places for each genre.
 ```sql
 SELECT genre, COUNT(*) AS total_places FROM ksa GROUP BY genre;
 ```
-#### 4. Display places that have more than 10,000 reviews.
+![image](https://github.com/user-attachments/assets/00aa62b9-0042-45bd-ac1f-b76e37d372f2)
+
+
+#### 4. Display places that have more than 90,000 reviews.
 ```sql
 SELECT * FROM ksa WHERE review_count > 10000;
 ```
+![image](https://github.com/user-attachments/assets/e129eef8-186e-4620-96b7-fe1d3f1dd0d0)
+
+
 #### 5. Find the highest-rated places, sorted in descending order.
 ```sql
 SELECT * FROM ksa ORDER BY rating DESC;
 ```
+![image](https://github.com/user-attachments/assets/583c3b10-e1ac-4154-97f9-37e11346fea2)
+
+
 #### 6. Show places that have comments (where best_comment is not empty).
 ```sql
 SELECT * FROM ksa WHERE best_comment IS NOT NULL;
 ```
+![image](https://github.com/user-attachments/assets/7e644d43-27a8-467c-bc9d-368783eeaabe)
+
+
 #### 7. Display places that are located in Saudi Arabia only.
 ```sql
 SELECT * FROM ksa WHERE location LIKE '%Saudi Arabia%';
 ```
+![image](https://github.com/user-attachments/assets/86b07edc-5f74-4b42-a2d0-3b24343b6c4d)
+
+
 #### 8. Calculate the average rating for each genre.
 ```sql
 SELECT genre, AVG(rating) AS avg_rating FROM ksa GROUP BY genre;
 ```
+![image](https://github.com/user-attachments/assets/195b72f7-8240-4139-8851-eed7bfcca1fa)
+
+
 #### 9. Show places that have the word "Theater" in their name.
 ```sql
 SELECT * FROM ksa WHERE name LIKE '%Theater%';
 ```
+![image](https://github.com/user-attachments/assets/6ae3c813-854d-4770-9af8-78772b07b7b3)
+
+
 #### 10. Retrieve 5 random places from the table.
 ```sql
 SELECT * FROM ksa ORDER BY RAND() LIMIT 5;
 ```
+![image](https://github.com/user-attachments/assets/ae43702f-2b59-4668-a15d-6c8064d0bb2b)
+
